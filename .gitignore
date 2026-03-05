@@ -1,0 +1,29 @@
+# Arquivos de state do Terraform (NUNCA commitar!)
+*.tfstate
+*.tfstate.*
+
+# Diretório de cache e plugins
+.terraform/
+.terraform.lock.hcl
+
+# Arquivos de variáveis sensíveis
+*.tfvars
+!terraform.tfvars
+
+# Arquivos de crash log
+crash.log
+crash.*.log
+
+# Arquivos de override (usados localmente)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Arquivos de plano (podem conter dados sensíveis)
+*.tfplan
+
+# Arquivos do sistema
+.DS_Store
+*.swp
+*.swo
