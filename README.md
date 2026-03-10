@@ -1,15 +1,29 @@
 # Terraform: Infraestrutura como Código
 
-Demo prática de Terraform provisionando infraestrutura na AWS.
+Este repositório inclui uma demonstração prática do uso do Terraform para provisionamento declarativo de infraestrutura na AWS, além de informações acerca dos integrantes que realizaram este trabalho e slides da apresentação.
 
-## O que é provisionado
+## 👨‍🔧 Integrantes
+
+- **[Ananda Vilar Vidal](https://github.com/4nandaw)**
+- **[Filipe Magno Alves Paiva](https://github.com/magnofilipe)**
+- **[Guilherme Alberto Dutra Camelo](https://github.com/GuilhermeAlz)**
+- **[José Jardel Alves de Medeiros](https://github.com/jjardelalves)**
+- **[Lázaro Queiroz do Nascimento](https://github.com/LazaroQueiroz)**
+- **[Caio Victor de França Araujo](https://github.com/CaioVFA)**
+
+## 💬 Slides da apresentação
+Acesse-os clicando **[aqui](https://www.figma.com/deck/E20Vu8bbkyrLMbRQH7o0VH)**!
+
+## 💻 Código!
+
+### O que é provisionado
 
 - VPC com sub-rede pública
 - Internet Gateway e tabela de rotas
 - Security Group (SSH + HTTP)
 - Instância EC2 com servidor Apache
 
-## Estrutura
+### Estrutura
 
 ```
 .
@@ -20,7 +34,7 @@ Demo prática de Terraform provisionando infraestrutura na AWS.
 └── versions.tf         # Versões do Terraform e providers
 ```
 
-## Pré-requisitos
+### Pré-requisitos
 
 - [Terraform](https://developer.hashicorp.com/terraform/downloads) >= 1.0
 - [AWS CLI](https://aws.amazon.com/cli/) configurado com credenciais válidas
@@ -48,7 +62,7 @@ terraform output website_url
 terraform destroy
 ```
 
-## Demonstração de mudança
+### Demonstração de mudança
 
 Para demonstrar atualização de infraestrutura existente, edite `terraform.tfvars` e altere o `instance_type`, depois rode `plan` e `apply` novamente. O Terraform detecta o delta e atualiza apenas o necessário, sem recriar recursos do zero.
 
