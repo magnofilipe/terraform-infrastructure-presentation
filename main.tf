@@ -131,5 +131,6 @@ resource "aws_instance" "web" {
     Name        = "${var.project_name}-ec2-${var.environment}"
     Role        = "webserver"
     Environment = var.environment
+    Version = "1.0"
   }
 }
